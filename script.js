@@ -18,7 +18,7 @@ function toggleTheme() {
   }
 }
 
-// Load saved theme on page load
+
 window.onload = () => {
   const savedTheme = localStorage.getItem("theme");
   const toggleBtn = document.getElementById("theme-toggle");
@@ -35,7 +35,7 @@ window.onload = () => {
   }
   toggleBtn.addEventListener('click', toggleTheme);
 };
-// Smooth scrolling for nav links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
