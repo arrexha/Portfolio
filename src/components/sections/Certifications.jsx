@@ -5,7 +5,7 @@ export const Certifications = () => {
       issuer: "Beetroot Academy",
       date: "10/2025 - 01/2026",
       languages: ["JavaScript", "React", "TypeScript"],
-      link: "https://your-certificate-link.com" 
+      
     },
         {
       title: "Python",
