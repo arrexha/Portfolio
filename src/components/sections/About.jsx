@@ -18,7 +18,7 @@ export const About = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="rounded-xl p-6 hover:-translate-y-1 transition-all ">
-                            <h3 className="text-xl font-bokd mb-4">Languages</h3>
+                            <h3 className="text-xl font-bokd mb-4">Programming Languages</h3>
                             <div className="flex flex-wrap gap-2">
                                 {languagesSkills.map((tech) => (
                                     <span 
