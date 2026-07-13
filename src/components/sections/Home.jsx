@@ -10,8 +10,7 @@ export const Home = () => {
              </h1>
 
              <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-             Computer Science and Engineering student with hands-on experience in programming and frontend development.
-             I have contributed to real-world projects using HTML & CSS, JavaScript, React, TypeScript, and Python
+             Junior IT at StarLabs | CS & Engineering Student | Frontend Development Enthusiast. Building web apps for fun, learning fast, and staying current with the latest tech.
 
              </p>
 
