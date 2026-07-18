@@ -1,11 +1,11 @@
 export const Certifications = () => {
   const certifications = [
     {
-      title: "Advanced JavaScript & React",
+      title: "Web Application Developer",
       issuer: "Beetroot Academy",
       date: "10/2025 - 12/2025",
       languages: ["JavaScript", "React", "TypeScript"],
-      link: "https://drive.google.com/file/d/1FnrS-ISPBALL_APDGYIBv9VHNKQm-097/view?usp=sharing" 
+      link: "https://drive.google.com/file/d/1u0be4yVBZLoQDPNXNByYWjaMhdjT9xAj/view?usp=sharing" 
       
     },
         {
