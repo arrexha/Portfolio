@@ -12,12 +12,6 @@ export const Projects = () => {
       languages: ["Python"],
       link: "https://github.com/arrexha/Football-Statistics-Dashboard" 
     },
-        {
-      title: "Premier League 2025/26 Prediction",
-      issuer: "Predicts the Premier League table using a Random Forest Classifier with Python, Pandas, NumPy and scikit-learn.",
-      languages: ["Python"],
-      link: "https://github.com/arrexha/Premier-League-2025-26-Predition" 
-    },  
     {
       title: "Weather App",
       issuer: "A simple weather application written in Python that retrieves and displays current weather information for a given location using a public weather API.",
