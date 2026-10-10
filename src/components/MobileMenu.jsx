@@ -1,16 +1,24 @@
+import { useEffect } from "react";
+import { navLinks } from "../navLinks";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+  // Stop the page behind from scrolling, and let Esc close the menu
+  useEffect(() => {
+    if (!menuOpen) return;
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen, setMenuOpen]);
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
-                     transition-all duration-300 ease-in-out
-
-                     ${
-                       menuOpen
-                         ? "h-screen opacity-100 pointer-events-auto"
-                         : "h-0 opacity-0 pointer-events-none"
-                     }
-                   `}
+      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.9)] backdrop-blur-md z-40 flex flex-col items-center justify-center
+                  transition-all duration-300 ease-in-out
+                  ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}`}
     >
       <button
         onClick={() => setMenuOpen(false)}
@@ -20,63 +28,18 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         &times;
       </button>
 
-      <a
-        href="#home"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-                    ${
-                      menuOpen
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-5"
-                    }        
-            `}
-      >
-        Home
-      </a>
-      <a
-        href="#about"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
-    `}
-      >
-        About
-      </a>
-      <a
-        href="#projects"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
-    `}
-      >
-        Projects
-      </a>
-      <a
-        href="#certifications"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
-    `}
-      >
-        Certifications
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }        
-    `}
-      >
-        Contact
-      </a>
+      {navLinks.map((link, i) => (
+        <a
+          key={link.id}
+          href={`#${link.id}`}
+          onClick={() => setMenuOpen(false)}
+          style={{ transitionDelay: menuOpen ? `${i * 50}ms` : "0ms" }}
+          className={`text-2xl font-semibold text-white my-4 transition-all duration-300
+                      ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+        >
+          {link.label}
+        </a>
+      ))}
     </div>
   );
 };
