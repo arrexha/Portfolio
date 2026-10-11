@@ -1,6 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-// Add a "demo" link to any project that's deployed and a "Live demo" button appears.
 const projects = [
   {
     title: "Crypto Tracker",

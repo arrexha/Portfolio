@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { navLinks } from "../navLinks";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
-  // Stop the page behind from scrolling, and let Esc close the menu
   useEffect(() => {
     if (!menuOpen) return;
     document.body.style.overflow = "hidden";

@@ -1,5 +1,4 @@
-// Add a short "description" to each job (1-2 lines on what you do there)
-// and it will show up under the dates.
+
 const experience = [
   {
     role: "Junior IT",

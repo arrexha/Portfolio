@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const FULL_TEXT = "<Welcome/>";
 
-// Sits on top of the site and fades out after about a second.
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
   const [leaving, setLeaving] = useState(false);
