@@ -30,6 +30,7 @@ const certifications = [
   {
     title: "Junior IT",
     issuer: "Shkolla Digjitale",
+    issuerUrl: "https://shkolladigjitale.com/",
     date: "09/2015 – 03/2016",
     link: "https://drive.google.com/file/d/16nB896GXLYwEZlNHmu-OXF4CZTbC4pom/view?usp=sharing",
   },
@@ -51,7 +52,15 @@ export const Certifications = () => {
               className="flex flex-col rounded-xl p-8 border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 transition-all"
             >
               <h3 className="text-xl font-semibold text-white mb-2">{cert.title}</h3>
-              <p className="text-gray-400 mb-1">{cert.issuer}</p>
+              <p className="text-gray-400 mb-1">
+                {cert.issuerUrl ? (
+                  <a href={cert.issuerUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 hover:underline transition-colors">
+                    {cert.issuer}
+                  </a>
+                ) : (
+                  cert.issuer
+                )}
+              </p>
               <p className="font-mono text-sm text-gray-500 mb-4">{cert.date}</p>
 
               {cert.skills && (

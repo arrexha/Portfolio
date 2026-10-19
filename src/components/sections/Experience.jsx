@@ -3,6 +3,7 @@ const experience = [
   {
     role: "Junior IT",
     company: "StarLabs",
+    url: "https://starlabs.dev/",
     date: "07/2026 – Present",
     location: "Prishtine, Kosovo",
   },
@@ -31,7 +32,15 @@ export const Experience = () => {
                 {job.location && ` · ${job.location}`}
               </p>
               <h3 className="text-xl font-semibold text-white">{job.role}</h3>
-              <p className="text-blue-400">{job.company}</p>
+              <p className="text-blue-400">
+                {job.url ? (
+                  <a href={job.url} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 hover:underline transition-colors">
+                    {job.company}
+                  </a>
+                ) : (
+                  job.company
+                )}
+              </p>
               {job.description && <p className="text-gray-400 mt-2">{job.description}</p>}
             </li>
           ))}

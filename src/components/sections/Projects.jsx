@@ -2,6 +2,12 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "One Tap",
+    description: "My personal link-in-bio page — all my socials in one place, one tap away.",
+    tech: ["React", "Vite", "Tailwind CSS"],
+    comingSoon: true,
+  },
+  {
     title: "Crypto Tracker",
     description: "Real-time cryptocurrency prices and market data.",
     tech: ["React", "TypeScript"],
@@ -42,15 +48,22 @@ export const Projects = () => {
               <h3 className="text-xl font-semibold text-white mb-2">{proj.title}</h3>
               <p className="text-gray-400 mb-4">{proj.description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {proj.tech.map((t) => (
-                  <span key={t} className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">
-                    {t}
-                  </span>
-                ))}
-              </div>
+              {proj.tech && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {proj.tech.map((t) => (
+                    <span key={t} className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               <div className="mt-auto flex flex-wrap gap-3">
+                {proj.comingSoon && (
+                  <span className="inline-flex items-center px-4 py-2 border border-dashed border-white/20 text-gray-400 rounded-lg text-sm font-semibold">
+                    Coming soon
+                  </span>
+                )}
                 {proj.github && (
                   <a
                     href={proj.github}
