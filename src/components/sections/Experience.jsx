@@ -4,6 +4,7 @@ const experience = [
     role: "Junior IT",
     company: "StarLabs",
     date: "07/2026 – Present",
+    location: "Prishtine, Kosovo",
   },
   {
     role: "Tier 1 Support Intern",

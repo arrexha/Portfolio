@@ -1,4 +1,4 @@
-// One list used by both the desktop navbar and the mobile menu.
+
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },

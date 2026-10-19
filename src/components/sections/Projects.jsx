@@ -7,13 +7,7 @@ const projects = [
     tech: ["React", "TypeScript"],
     github: "https://github.com/arrexha/Crypto_Tracker",
   },
-  {
-    title: "Football Statistics Dashboard",
-    description:
-      "Interactive Streamlit app for real-time soccer stats, team analysis, player performance, standings, and AI match predictions.",
-    tech: ["Python", "Streamlit", "Plotly"],
-    github: "https://github.com/arrexha/Football-Statistics-Dashboard",
-  },
+
   {
     title: "Weather App",
     description:

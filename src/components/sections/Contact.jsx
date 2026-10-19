@@ -16,7 +16,6 @@ export const Contact = () => {
         <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
           Contact
         </h2>
-        <p className="text-gray-400 mb-2">Got a question or an opportunity? Reach out on any of these.</p>
         <p className="font-mono text-gray-300 mb-12 select-all break-all">{EMAIL}</p>
 
         <div className="flex flex-wrap justify-center gap-8 sm:gap-12">
