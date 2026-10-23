@@ -19,7 +19,7 @@ body {
   color: #f3f4f6;
 }
 
-/* Keeps section titles from hiding under the fixed navbar */
+
 section[id] {
   scroll-margin-top: 4rem;
 }
@@ -64,7 +64,7 @@ button:focus-visible {
   }
 }
 
-/* Scroll reveal (used by the useReveal hook) */
+
 @keyframes reveal-up {
   from {
     opacity: 0;

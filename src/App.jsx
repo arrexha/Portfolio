@@ -11,7 +11,6 @@ import { Certifications } from "./components/sections/Certifications";
 import { Contact } from "./components/sections/Contact";
 import { useReveal } from "./hooks/useReveal";
 
-// Show the intro once per visit, and skip it for people who turned off animations.
 const shouldShowIntro = () => {
   try {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return false;
